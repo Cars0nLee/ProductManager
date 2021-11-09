@@ -15,6 +15,7 @@ export default () => {
 
     return(
         <div>
+            <h2>Product Manager</h2>
             <Products></Products>
             <br></br>
             <ProductList product={product}></ProductList>
