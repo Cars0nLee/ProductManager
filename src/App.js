@@ -1,20 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import Products from './Components/Products';
-
+import Main from "./views/Main"
+import Detail from "./Components/Detail"
+import {BrowserRouter, Switch, Route} from "react-router-dom"
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <h2>Product Manager</h2>
-      </header>
-      <div id="form">
-        <Products></Products>
-      </div>
-      
-    </div>
+          <BrowserRouter>
+          <Switch>
+            <div className="App">
+                <h2>Product Manager</h2>
+            <br></br>
+              <Route exact path="/api/product/:_id" component={Detail}/>
+              <Route exact path="/" component={Main}/>
+            </div>
+            </Switch>
+          </BrowserRouter>
   );
 }
 
